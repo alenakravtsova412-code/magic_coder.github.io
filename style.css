@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой красивый сайт</title>
+    <!-- подключаем CSS – убираем первый слеш, чтобы путь был относительным -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Привет, мир! ✨</h1>
+            <p>Это моя первая стильная страница, сделанная с любовью и Visual Studio Code.</p>
+            <button id="magicButton">Нажми на меня</button>
+            <div id="message" class="message hidden"></div>
+        </div>
+    </div>
+
+    <!-- немного JavaScript для интерактива (по желанию) -->
+    <script>
+        const button = document.getElementById('magicButton');
+        const messageDiv = document.getElementById('message');
+        button.addEventListener('click', () => {
+            messageDiv.textContent = 'Волшебство случилось! 🎉';
+            messageDiv.classList.remove('hidden');
+            button.textContent = 'Уже нажали';
+            button.disabled = true;
+        });
+    </script>
+</body>
